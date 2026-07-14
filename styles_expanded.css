@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #800020; /* Deep burgundy red */
+    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #87CEEB 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Decorative background elements - flowers, vines, and fruits */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 182, 193, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 192, 203, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(255, 218, 185, 0.2) 0%, transparent 30%),
+        radial-gradient(circle at 20% 90%, rgba(255, 160, 122, 0.3) 0%, transparent 15%),
+        radial-gradient(circle at 80% 10%, rgba(255, 105, 180, 0.2) 0%, transparent 18%),
+        radial-gradient(circle at 30% 70%, rgba(255, 228, 225, 0.4) 0%, transparent 25%),
+        radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.3) 0%, transparent 22%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Vine-like decorative elements */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,0 Q30,50 10,100" stroke="%2398FB98" stroke-width="2" fill="none" opacity="0.3"/><path d="M90,0 Q70,50 90,100" stroke="%2398FB98" stroke-width="2" fill="none" opacity="0.3"/><circle cx="10" cy="30" r="5" fill="%23FFB6C1" opacity="0.4"/><circle cx="90" cy="70" r="5" fill="%23FFB6C1" opacity="0.4"/><circle cx="50" cy="50" r="8" fill="%23FFA07A" opacity="0.3"/></svg>');
+    background-size: 200px 200px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #800020;
+}
+
+.name-section {
+    flex: 1;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #800020;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background: #800020;
+    margin: 10px 0;
+}
+
+.location {
+    font-size: 8px;
+    color: #800020;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.picture-section {
+    margin-left: 30px;
+}
+
+.profile-picture {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #800020;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.heading {
+    font-size: 14px;
+    font-weight: bold;
+    color: #800020;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #800020;
+    padding-bottom: 8px;
+}
+
+.story-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.story-section strong {
+    font-weight: bold;
+    color: #600018;
+}
+
+.certifications-section h3 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #800020;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.certifications-section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.certifications-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.certifications-section strong {
+    font-weight: bold;
+    color: #600018;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .picture-section {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .name-section {
+        text-align: center;
+    }
+    
+    .divider {
+        margin: 10px auto;
+    }
+}
