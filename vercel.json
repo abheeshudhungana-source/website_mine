@@ -4,11 +4,11 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/watermarks_added.html"
+      "destination": "/Projects_added.html"
     },
     {
       "source": "/index",
-      "destination": "/watermarks_added.html"
+      "destination": "/Projects_added.html"
     }
   ]
 }
